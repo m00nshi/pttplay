@@ -20,7 +20,8 @@ let
   app2 = writeShellApplication {
     name = "cosrecord.sh";
     runtimeInputs = [ alsa-utils file cm108 hidapitester ];
-    text = builtins.readFile ./cosrecord.sh;
+    #text = builtins.readFile ./cosrecord.sh;
+    text = builtins.readFile ./rec.sh;
   };
 in
 symlinkJoin {
